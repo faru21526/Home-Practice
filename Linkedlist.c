@@ -67,6 +67,14 @@ void insertAtBegining(int num){
     head=newNode;
 
 }
+//delete from end
+void deleteFromEnd(){
+    struct node *temp=head;
+    while(temp->next->next!=NULL){
+        temp=temp->next;
+    }
+temp->next=NULL;
+}
 //printing node value
 head=one;
 printLinkedList(head);
@@ -76,6 +84,8 @@ insertAtEnd(5);
 
 printTraverseLinkedList();
 insertAtBegining(0);
+printTraverseLinkedList();
+deleteFromEnd();
 printTraverseLinkedList();
 
 
