@@ -75,6 +75,30 @@ void deleteFromEnd(){
     }
 temp->next=NULL;
 }
+//delete from beginning
+void deleteFromBeginning(){
+    struct node *temp=head;
+    if(head == NULL)
+    {
+        printf("List is already empty.");
+    }
+    else
+    {
+head=head->next;
+}
+}
+//search an element
+int searchNode(struct node **head,int key){
+struct node *temp=head;
+while(temp!=NULL){
+    if(temp->value == key)
+            return 1;
+            temp=temp->next;
+}
+    return 0;
+
+}
+
 //printing node value
 head=one;
 printLinkedList(head);
@@ -87,6 +111,17 @@ insertAtBegining(0);
 printTraverseLinkedList();
 deleteFromEnd();
 printTraverseLinkedList();
+deleteFromBeginning();
+printTraverseLinkedList();
+
+    if (searchNode(head, 4))
+        printf("\nYes");
+    else
+        printf("\nNo");
+
+    return 0;
+
+
 
 
 
